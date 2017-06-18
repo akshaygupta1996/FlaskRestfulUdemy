@@ -8,7 +8,10 @@ from resources.item import Item, ItemList
 from resources.store import Store, StoreList
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+
+# 'mysql+pymysql://flaskdemo:flaskdemo@flaskdemo.cwsaehb7ywmi.us-east-1.rds.amazonaws.com:3306/flaskdemo'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://akshay1234:akshay7272@udemy.cjyjj0rgxaie.us-west-2.rds.amazonaws.com:3306/udemydb'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'akshay7272'
 api = Api(app)
